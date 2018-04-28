@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 
 class Comment extends Component {
 
+    /**
+     * 子组件要获取 context 里面的内容的话，
+     * 就必须写 contextTypes 来声明和验证你需要获取的状态的类型，
+     * 它也是必写的，如果你不写就无法获取 context 里面的状态
+     */
     static contextTypes = {
         themeColor:PropTypes.string
     }

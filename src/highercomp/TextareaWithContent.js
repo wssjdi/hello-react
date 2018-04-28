@@ -9,7 +9,7 @@ import wrapWithLoadDate from './wrapWithLoadData'
  */
 class TextareaWithContent extends Component {
     render(){
-        return <input value={this.props.data}/>
+        return <textarea value={this.props.data}/>
     }
 }
 
