@@ -38,6 +38,18 @@ class CommentApp extends Component{
      * getChildContext 这个方法就是设置 context 的过程，
      * 它返回的对象就是 context（也就是上图中处于中间的方块），
      * 所有的子组件都可以访问到这个对象。
+     * 
+     * 提供 context 的组件必须提供 childContextTypes 作为 context 的声明和验证
+     * 
+     * context 打破了组件和组件之间通过 props 传递数据的规范，极大地增强了组件之间的耦合性。
+     * 而且，就如全局变量一样，context 里面的数据能被随意接触就能被随意修改，
+     * 每个组件都能够改 context 里面的内容会导致程序的运行不可预料
+     * 
+     * 但是这种机制对于前端应用状态管理来说是很有帮助的，因为毕竟很多状态都会在组件之间进行共享，
+     * context 会给我们带来很大的方便。一些第三方的前端应用状态管理的库（例如 Redux）就是充分地
+     * 利用了这种机制给我们提供便利的状态管理服务。但我们一般不需要手动写 context，也不要用它，
+     * 只需要用好这些第三方的应用状态管理库就行了
+     * 
      * 我们用 this.state.themeColor 来设置了 context 里面的 themeColor
      */
     getChildContext(){
