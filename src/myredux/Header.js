@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import myconnect from '../highercomp/myconnect'
+// import myconnect from '../highercomp/myconnect'
+import { connect } from 'react-redux'
 
 class Header extends Component {
 
@@ -48,6 +49,6 @@ const mapStateToProps = (state) => {
     }
   }
 
-Header = myconnect(mapStateToProps)(Header)
+Header = connect(mapStateToProps)(Header)
 
 export default Header

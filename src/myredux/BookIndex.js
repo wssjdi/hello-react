@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import createStore from './createStore'
-import Provider from './Provider'
+// import createStore from './createStore'
+// import Provider from './Provider'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
 import Header from './Header'
 import Content from './Content'
 import './bookIndex.css'
@@ -33,8 +35,10 @@ class BookIndex extends Component {
     render () {
       return (
         <Provider store={store}>
-          <Header />
-          <Content />
+          <div>
+            <Header />
+            <Content />
+          </div>
         </Provider>
       )
     }
