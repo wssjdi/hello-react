@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 // import Provider from './Provider'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import Header from './Header'
-import Content from './Content'
+import Header from './container/Header'
+import Content from './container/Content'
+import ThemeSwitch from './container/ThemeSwitch'
 import './bookIndex.css'
 
 const themeReducer = (state,action)=>{  
@@ -37,7 +38,10 @@ class BookIndex extends Component {
         <Provider store={store}>
           <div>
             <Header />
-            <Content />
+            <div>
+              <Content />
+              <ThemeSwitch />
+            </div>
           </div>
         </Provider>
       )
